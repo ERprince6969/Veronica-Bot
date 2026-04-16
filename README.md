@@ -1,12 +1,23 @@
-# Veronica-Bot
-Mi sono innamorato della sorella di carmine
+# 🤖 Discord Bot
 
+se sai java, sai python.
 
-# 🤖 Smerd
+---
 
 ## ⚙️ Installazione
 
-Se non sai cos’è Python… chiudi tutto e vai a fare altro.
+### 1. Installa Python (se non ce l’hai per chi non lo avesse intuito)
+
+Vai qui:  
+https://www.python.org/downloads/
+
+- Scarica Python  
+- Durante l’installazione **spunta “Add Python to PATH”** (se non lo fai, poi non lamentarti)
+
+Per controllare:
+
+```bash
+python --version
 
 ---
 
@@ -36,10 +47,3 @@ Se non sai cos’è Python… chiudi tutto e vai a fare altro.
   - Endpoint `/ping` (JSON)
 
 ---
-
-Se invece hai un minimo di dignità (c'è anche starta.bat per i gay "plug and play":
-
-```bash
-git clone https://github.com/Erprince6969/Veronica-Bot.git
-cd tuo-repo
-pip install -r requirements.txt
