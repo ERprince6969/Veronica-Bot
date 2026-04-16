@@ -19,6 +19,8 @@ Per controllare:
 ```bash
 python --version
 
+```
+
 ---
 
 ## ⚡ Features
