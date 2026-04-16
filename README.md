@@ -37,7 +37,7 @@ Se non sai cos’è Python… chiudi tutto e vai a fare altro.
 
 ---
 
-Se invece hai un minimo di dignità:
+Se invece hai un minimo di dignità (c'è anche starta.bat per i gay "plug and play":
 
 ```bash
 git clone https://github.com/Erprince6969/Veronica-Bot.git
