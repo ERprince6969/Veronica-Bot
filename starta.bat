@@ -1,8 +1,8 @@
 @echo off
-title Discord Bot Launcher
+title LU TITOLO
 
 echo ===============================
-echo   Discord Bot - Avvio
+echo   VERONICA SBORRONICA
 echo ===============================
 echo.
 
