@@ -1,55 +1,45 @@
 @echo off
-title LU TITOLO
+chcp 65001 >nul
+title Discord Bot Launcher
 
 echo ===============================
-echo   VERONICA SBORRONICA
+echo   Discord Bot - Avvio
 echo ===============================
 echo.
 
-:: Controllo Python
+:: Controllo Python e pip in un unico passaggio
 python --version >nul 2>&1
 IF %ERRORLEVEL% NEQ 0 (
-    echo Volevi installare il bot senza python?
-    echo Installa Python e riprova: https://www.python.org/downloads/
+    echo [ERRORE] Python non trovato. Installalo da: https://www.python.org/downloads/
     pause
-    exit /b
+    exit /b 1
 )
 
-echo Python rilevato
-echo.
-
-:: Controllo pip
-pip --version >nul 2>&1
+python -m pip --version >nul 2>&1
 IF %ERRORLEVEL% NEQ 0 (
-    echo pip non trovato.
-    echo Reinstalla Python con pip incluso.
+    echo [ERRORE] pip non trovato. Reinstalla Python includendo pip.
     pause
-    exit /b
+    exit /b 1
 )
 
-echo pip rilevato
-echo.
-
-:: Installazione requirements
+:: Installazione veloce e silenziosa delle dipendenze
 IF EXIST requirements.txt (
-    echo Installazione dipendenze...
-    pip install -r requirements.txt
+    echo Verifica dipendenze in corso...
+    python -m pip install -q -r requirements.txt
     IF %ERRORLEVEL% NEQ 0 (
-        echo Errore durante installazione librerie.
+        echo [ERRORE] Installazione librerie fallita.
         pause
-        exit /b
+        exit /b 1
     )
-    echo Librerie installate
+    echo Librerie pronte.
 ) ELSE (
-    echo requirements.txt non trovato, salto installazione
+    echo [AVVISO] requirements.txt non trovato, salto installazione.
 )
 
 echo.
-
-:: Avvio bot
 echo Avvio bot...
 python bot.py
 
 echo.
-echo Il bot si e chiuso (o hai fatto casino)
+echo Il bot si è chiuso (o hai fatto casino).
 pause
